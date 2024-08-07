@@ -40,7 +40,7 @@ const bear: BearData[] = [
         file: "https://raw.githubusercontent.com/aakashsharma003/PaytmWeb/main/README.md",
         icon: "i-heroicons-solid:credit-card",
         excerpt: "A demonstration Project For Paytm transactions...",
-        link: "https://github.com/Renovamen/flint"
+        link: "https://github.com/aakashsharma003/paytm-web"
       },
       {
         id: "portfolio-macos",
@@ -48,7 +48,7 @@ const bear: BearData[] = [
         file: "https://raw.githubusercontent.com/aakashsharma003/macOS-Portfolio/main/README.md",
         icon: "i-heroicons-outline:device-desktop",
         excerpt: "My portfolio website simulating macOS's GUI...",
-        link: "https://github.com/Renovamen/playground-macos"
+        link: "https://github.com/aakashsharma003/macos-portfolio"
       },
       {
         id: "medium-2.0",
