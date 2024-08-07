@@ -35,7 +35,7 @@ export default function Dock({
 
   return (
     <div
-      className={`dock fixed inset-x-0 mx-auto bottom-1 ${hide ? "z-0" : "z-50"}`}
+      className={`dock fixed inset-x-0 mx-2 sm:mx-auto bottom-1 ${hide ? "z-0" : "z-50"}`}
       w="full sm:max"
       overflow="x-scroll sm:x-visible"
     >
