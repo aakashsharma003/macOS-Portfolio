@@ -75,11 +75,11 @@ const terminal: TerminalData[] = [
               Personal Website:{" "}
               <a
                 className="text-blue-300"
-                href="https://aakashsharma003.vercel.app"
+                href="https://aakash-sharma.vercel.app"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://aakashsharma003.vercel.app
+                https://aakash-sharma.vercel.app
               </a>
             </li>
             <li>

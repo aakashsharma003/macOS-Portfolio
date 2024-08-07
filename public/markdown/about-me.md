@@ -25,7 +25,7 @@ Contact me by:
 - Github: [@aakashsharma003](https://github.com/macOS-Portfolio)
 - GSSOC: [GSSOC Contributer](https://gssoc.girlscript.tech/)
 - Linkedin: [aakashsharma003](https://www.linkedin.com/in/aakashsharma003)
-- Personal Website: [dev.me](https://aakashsharma.vercel.app)
+- Personal Website: [dev.me](https://aakash-sharma.vercel.app)
 
 
 ## Resume
