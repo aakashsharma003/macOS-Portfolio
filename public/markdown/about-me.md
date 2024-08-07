@@ -30,7 +30,5 @@ Contact me by:
 
 ## Resume
 
-- Normal version: [English](https://zxh.me/files/cv/en.pdf)
+- download: [English](https://drive.google.com/file/d/1EDQQZQvAWodAMgEdycBP7E_6UmmVlz-x/view?usp=sharing)
 
-
-- Interesting version: [portfolio.me](https://aakashsharma.vercel.app) / [resume.io](https://resume.io)
