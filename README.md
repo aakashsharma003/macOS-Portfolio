@@ -1,6 +1,6 @@
 # macos-portfolio
 
-My portfolio website simulating macOS's GUI: https://aakash-sharma.vercel.app
+My portfolio website simulating macOS's GUI: https://aakashsharma.vercel.app
 
 Powered by [React](https://reactjs.org/) + [Zustand](https://zustand-demo.pmnd.rs/) + [UnoCSS](https://uno.antfu.me/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/).
 
