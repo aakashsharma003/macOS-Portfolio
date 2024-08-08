@@ -5,7 +5,7 @@ import moment from "moment"
 
 export default function Login(props: MacActions) {
   const [password, setPassword] = useState("");
-  const [sign, setSign] = useState("");
+  const [sign, setSign] = useState("Press enter to login");
   const dark = useStore((state) => state.dark);
   const [isloginOpen, setIsLoginOpen] = useState(false);
    const [time, setTime] = useState(moment().format('h:mm A'));

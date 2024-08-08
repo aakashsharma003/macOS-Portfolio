@@ -1,19 +1,19 @@
 {
-  "short_name": "playground-macos",
+  "short_name": "macos-portfolio",
   "name": "Akash's Portfolio",
   "icons": [
     {
-      "src": "logo/favicon.ico",
+      "src": "/logo/logo64.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo/favicon.ico",
+      "src": "logo/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo/favicon.ico",
+      "src": "logo/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
