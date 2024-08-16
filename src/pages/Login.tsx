@@ -1,29 +1,29 @@
 import React from "react";
 import { wallpapers, user } from "~/configs";
 import type { MacActions } from "~/types";
-import moment from "moment"
+import moment from "moment";
 
 export default function Login(props: MacActions) {
   const [password, setPassword] = useState("");
   const [sign, setSign] = useState("Press enter to login");
   const dark = useStore((state) => state.dark);
   const [isloginOpen, setIsLoginOpen] = useState(false);
-   const [time, setTime] = useState(moment().format('h:mm A'));
-  const [date, setDate] = useState(moment().format('dddd, MMMM D'));
+  const [time, setTime] = useState(moment().format("h:mm A"));
+  const [date, setDate] = useState(moment().format("dddd, MMMM D"));
 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setTime(moment().format("h:mm A"));
-        setDate(moment().format('dddd, MMMM D'));
-      }, 1000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(moment().format("h:mm A"));
+      setDate(moment().format("dddd, MMMM D"));
+    }, 1000);
 
-      return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const keyPress = (e: React.KeyboardEvent) => {
     const keyCode = e.key;
-    if (keyCode === "Enter" || keyCode === "Space" || keyCode === "Tab") props.setLogin(true);
-  
+    if (keyCode === "Enter" || keyCode === "Space" || keyCode === "Tab")
+      props.setLogin(true);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -70,7 +70,10 @@ export default function Login(props: MacActions) {
             <div className="flex justify-center item-center">
               <button
                 className="text-sm text-white no-outline bg-transparent flex justify-center items-center rounded-md backdrop-blur-2xl bg-gray-300/50 p-2 mt-2"
-                onClick={(e) => {e.stopPropagation();props.setLogin(true);}}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  props.setLogin(true);
+                }}
                 onKeyDown={keyPress}
               >
                 login
@@ -111,9 +114,22 @@ export default function Login(props: MacActions) {
         </div>
       )}
       {!isloginOpen && (
-        <div className="size-full flex flex-col justify-between items-center p-5 font-sans font-bold">
-          <div className="text-white text-8xl font-thin">{time}</div>
-          <div className="mt-2 cursor-pointer text-sm-gray-200">
+        <div
+          className="size-full flex flex-col justify-between items-center p-5"
+          style={{
+            fontFamily: "'Matemasie', sans-serif",
+            fontWeight: "400",
+            fontStyle: "normal",
+          }}
+        >
+          <div className="text-white text-8xl font-thin tracking-[1px]">
+            {time}
+          </div>
+          <div
+            className="mt-2 cursor-pointer text-white font-bold tracking-[3px]
+          md:tracking-[5px]
+          "
+          >
             Click to Start
           </div>
         </div>
