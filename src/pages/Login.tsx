@@ -113,8 +113,8 @@ export default function Login(props: MacActions) {
       {!isloginOpen && (
         <div className="size-full flex flex-col justify-between items-center p-5 font-sans font-bold">
           <div className="text-white text-8xl font-thin">{time}</div>
-          <div mt-2 cursor-pointer text="sm gray-200">
-            Click to start
+          <div className="mt-2 cursor-pointer text-sm-gray-200">
+            Click to Start
           </div>
         </div>
       )}
