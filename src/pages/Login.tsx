@@ -22,7 +22,7 @@ export default function Login(props: MacActions) {
 
   const keyPress = (e: React.KeyboardEvent) => {
     const keyCode = e.key;
-    if (keyCode === "Enter" || keyCode === "Space" || keyCode === "Tab") loginHandle();
+    if (keyCode === "Enter" || keyCode === "Space" || keyCode === "Tab") props.setLogin(true);
   
   };
 
@@ -30,15 +30,15 @@ export default function Login(props: MacActions) {
     setPassword(e.target.value);
   };
 
-  const loginHandle = () => {
-    if (user.password === password) {
-      // not set password or password correct
-      props.setLogin(true);
-    } else {
-      // password not null and incorrect
-      setSign("Incorrect password");
-    }
-  };
+  // const loginHandle = () => {
+  //   if (user.password === password) {
+  //     // not set password or password correct
+  //     props.setLogin(true);
+  //   } else {
+  //     // password not null and incorrect
+  //     setSign("Incorrect password");
+  //   }
+  // };
 
   return (
     <div
@@ -46,13 +46,14 @@ export default function Login(props: MacActions) {
       style={{
         background: `url(${
           dark ? wallpapers.night : wallpapers.day
-        }) center/cover no-repeat`
+        }) center/cover no-repeat`,
       }}
       onClick={() => setIsLoginOpen(true)}
     >
       {isloginOpen && (
-        <div className="size-full absolute bg-gray-900/20 backdrop-blur-2xl"
-        onClick={() => loginHandle}
+        <div
+          className="size-full absolute bg-gray-900/20 backdrop-blur-2xl"
+          onKeyDown={keyPress}
         >
           <div className="inline-block w-auto relative top-1/2 -mt-40 ">
             {/* Avatar */}
@@ -61,26 +62,19 @@ export default function Login(props: MacActions) {
               src={user.avatar}
               alt="img"
             />
-            <div className="font-semibold mt-2 text-xl text-white">{user.name}</div>
-
-            {/* Password Input */}
-            <div className="mx-auto grid grid-cols-5 w-44 h-8 mt-4 rounded-md backdrop-blur-2xl bg-gray-300/50">
-              <input
-                className="text-sm text-white col-start-1 col-span-4 no-outline bg-transparent px-2"
-                type="password"
-                placeholder="Enter Password"
-                onClick={(e) => e.stopPropagation()}
-                onKeyDown={keyPress}
-                value={password}
-                onChange={handleInputChange}
-              />
-              <div className="col-start-5 col-span-1 flex-center">
-                <span className="i-bi:question-square-fill text-white ml-1" />
-              </div>
+            <div className="font-semibold mt-2 text-xl text-white">
+              {user.name}
             </div>
 
-            <div mt-2 cursor-pointer text="sm gray-200">
-              {sign}
+            {/* Password Input */}
+            <div className="flex justify-center item-center">
+              <button
+                className="text-sm text-white no-outline bg-transparent flex justify-center items-center rounded-md backdrop-blur-2xl bg-gray-300/50 p-2 mt-2"
+                onClick={(e) => {e.stopPropagation();props.setLogin(true);}}
+                onKeyDown={keyPress}
+              >
+                login
+              </button>
             </div>
           </div>
 
@@ -117,13 +111,11 @@ export default function Login(props: MacActions) {
         </div>
       )}
       {!isloginOpen && (
-        <div className="size-full flex justify-center items-start p-5 font-sans font-bold">
-         <div className="text-white text-8xl font-thin">
-        {time}
-      </div>
-      <div className="text-white text-2xl mt-4">
-        {date}
-      </div>
+        <div className="size-full flex flex-col justify-between items-center p-5 font-sans font-bold">
+          <div className="text-white text-8xl font-thin">{time}</div>
+          <div mt-2 cursor-pointer text="sm gray-200">
+            Click to start
+          </div>
         </div>
       )}
     </div>
